@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GA Students Manager</title>
+
+	<!-- FOR ANGULAR ROUTING -->
+	<base href="/">
+
+	<!-- CSS  -->
+	<!-- load bootstrap from CDN and custom CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+
+	<!-- JS -->
+	<!-- load angular and angular-route via CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-animate.js"></script>
+
+	<!-- controllers -->
+	<script src="../app/controllers/mainCtrl.js"></script>
+	<script src="../app/controllers/userCtrl.js"></script>
+
+	<!-- services -->
+
+	<script src="app/services/userService.js"></script>
+
+	<!-- main Angular app files -->
+	<script src="../app/app.routes.js"></script>
+	<script src="../app/app.js"></script>
+</head>
+<body ng-app="userApp" ng-controller="mainController as main">
+
+<!-- NAVBAR -->
+<header>
+	<div class="navbar " >
+	<div class="container">
+		<div class="navbar-header">
+			<a href="/" class="navbar-brand"  style="color: red"><b>GA</b>ngsters</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="/users" ><span class="glyphicon glyphicon-user"></span> Users</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li ><a href="/login">Login</a></li>
+		</ul>
+	</div>
+	</div>
+</header>
+Test: {{1+4}}
+
+<main class="container">
+	<!-- ANGULAR VIEWS -->
+	<div ng-view></div>
+</main>
+
+</body>
+</html>
