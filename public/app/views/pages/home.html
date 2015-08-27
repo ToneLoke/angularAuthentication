@@ -1,13 +1,13 @@
 <div class="jumbotron text-center">
-	<h1>Welcome to the GAngsters student manager!</h1>
+	<h1>Welcome GA student manager!</h1>
 
-	<div >
+	<div ng-if="!main.loggedIn">
 		<p>Login to see manage your students.</p>
 		<a href="/login" class="btn btn-primary">Login</a>
 	</div>
 
-	<div >
+	<div ng-if="main.loggedIn">
 		<p>Manage your students.</p>
-		<a href="#" class="btn btn-primary">View Students</a>
+		<a href="/users" class="btn btn-primary">View Students</a>
 	</div>
 </div>
